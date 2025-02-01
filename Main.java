@@ -197,5 +197,163 @@ public class Main { // name of java file must match the class name
         System.out.println(x3 > y3); // returns true, because 10 is higher than 9
         System.out.println(x3 == y3); // returns false, because 10 is not equal to 9
         System.out.println(10 == 15); // returns false, because 10 is not equal to 15
+
+        // If...Else
+        if (20 < 18) {
+            System.out.println("20 is greater than 18");
+        }
+
+        // Else Statement
+        int time = 20;
+        if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        } // Outputs "Good evening."
+
+        // Else if statement
+        int time2 = 22;
+        if (time2 < 10) {
+            System.out.println("Good morning.");
+        } else if (time2 < 20) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        } // Outputs "Good evening."
+
+        // Short Hand if..else syntax is variable = (condition) ? expressionTrue : expressionFalse;
+        int time3 = 20;
+        String result = (time < 20) ? "Good day." : "Good evening.";
+        System.out.println(result); // Outputs "Good evening."
+
+        // Java Switch Statements
+        /*
+        switch(expression) {
+            case x:
+                // code block
+                break;
+            case y:
+                // code block
+                break;
+            default:
+                // code block
+        }
+        */
+       int day = 4;
+       switch (day) {
+        case 1 -> System.out.println("Monday");
+        case 2 -> System.out.println("Tuesday");
+        case 3 -> System.out.println("Wednesday");
+        case 4 -> System.out.println("Thursday");
+        case 5 -> System.out.println("Friday");
+        case 6 -> System.out.println("Saturday");
+        case 7 -> System.out.println("Sunday");
+       }
+
+       // default keyword
+        int day2 = 4;
+        switch (day2) {
+            case 6 -> System.out.println("Today is Saturday");
+            case 7 -> System.out.println("Today is Sunday");
+            default -> System.out.println("Looking forward to the Weekend");
+        }
+
+        // While Loop
+        int i = 0;
+        while (i < 5) {
+            System.out.println(i);
+            i++;
+        }
+
+        // Do/While Loop
+        int j = 0;
+        do { 
+            System.out.println(j);
+            j++;
+        } while (j < 5);
+
+        // For Loop
+        for (int k = 0; k < 5; k++) {
+            System.out.println(k);
+        }
+
+        // Nested Loops
+        for (int m = 1; m <= 2; m++) {
+            System.out.println("Outer loop iteration " + m);
+
+            for (int n = 1; n <= 3; n++) {
+                System.out.println(" Inner: " + n);
+            }
+        }
+
+        // For-Each Loop - Used exclusively to loop through elements in an array
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        for (String car : cars) {
+            System.out.println(car);
+        }
+
+        // Break and Continue Statements
+        for  (int p = 0; p < 10; p++) {
+            if (p == 4) {
+                break;
+            }
+            System.out.println(p);
+        }
+
+        for (int q = 0; q < 10; q++) {
+            if (q == 4) {
+                continue;
+            }
+            System.out.println(q);
+        } // Here, the loop will skip printing 4
+
+        // Arrays
+        // To declare an array, define the variable type with square brackets
+        String[] cars2 = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(cars2[0]);
+
+        // To create an array of integers:
+        int[] myNum7 = {10, 20, 30, 40};
+        System.out.println(myNum7[1]); 
+
+        // Changing an Array Element
+        cars2[0] = "Opel";
+        System.out.println(cars2[0]); // Opel
+
+        // Array Length
+        System.out.println(cars2.length); // 4
+
+        // Loop Through an Array
+        for (int q = 0; q < cars2.length; q++) {
+            System.out.println(cars2[q]);
+        }
+
+        // Looping through the Array using For-Each
+        for (String r : cars2) {
+            System.out.println(r);
+        }
+
+        // Multidimensional Arrays
+        // To create a two-dimensional array, add each array within its own set of curly braces
+        int[][] myNumberz = { {1, 2, 3, 4}, {5, 6, 7} };
+        System.out.println(myNumberz[1][2]); // Outputs 7
+
+        //  Changing Element Values
+        myNumberz[1][2] = 8;
+        System.out.println(myNumberz[1][2]); // Outputs 8
+
+        // Looping through a multidimensional array
+        for (int t = 0; t < myNumberz.length; ++t) {
+            for (int u = 0; u < myNumberz[t].length; ++u) {
+                System.out.println(myNumberz[t][u]);
+            }
+        }
+
+        // Looping using For Each Method
+        for(int[] row : myNumberz) {
+            for (int element : row) {
+                System.out.println(element);
+            }
+        }
     }
 }
